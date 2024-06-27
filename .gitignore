@@ -1,0 +1,5 @@
+# Ignore folders:
+.mops
+
+# Ignore files:
+playground.md
