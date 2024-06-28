@@ -1,3 +1,7 @@
+## 1.0.3
+
+- Completed the most important mathematical constants
+
 ## 1.0.2
 
 - Corrected the description of the add function

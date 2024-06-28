@@ -1,16 +1,17 @@
 [package]
 name = "nm"
-version = "1.0.2"
+version = "1.0.3"
 description = "Native Math (NM): A tiny math library for Motoko"
 repository = "https://github.com/dr-montasir/nm"
 keywords = [
   "math",
   "native_math",
   "library",
-  "web3",
-  "icp",
-  "motoko",
+  "pkg",
   "mops",
-  "pkg"
+  "motoko",
+  "icp",
+  "web3",
+  "blockchain"
 ]
 license = "Apache-2.0"
