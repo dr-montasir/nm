@@ -1,4 +1,5 @@
 import Constants "Constants";
+import Functions "Functions";
 
 module {
 	// This comment will not be included in the documentation
@@ -76,20 +77,19 @@ module {
 	/// 0.434294481903252
 	public let log10e : Float = Constants.LOG10E;
 
-	/// add
+	/// abs
 	///
-	/// Mathematical operations
+	/// Native function
 	///
-	/// Add two float numbers
+	/// The abs function returns the absolute value of a number
 	///
 	/// Example:
 	/// ```motoko
-	/// assert add(1, 2) == 3;
-	/// assert add(7, 3) == 10;
-	/// assert add(0.1, 0.2) != 0.3;
-	/// assert add(0.1, 0.2) == 0.30000000000000004;
+	/// assert abs(0) == 0;
+	/// assert abs(3) == 3;
+	/// assert abs(-1) == 1;
 	/// ```
-	public func add(x : Float, y : Float) : Float {
-		return x + y;
+	public func abs(x : Float) : Float {
+		return Functions.abs0(x);
 	};
 };
