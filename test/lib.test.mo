@@ -1,4 +1,4 @@
-import { e; pi; phi; tau; ln2; ln10; log2e; log10e; abs } "../src";
+import { e; pi; phi; tau; ln2; ln10; log2e; log10e; abs; sign } "../src";
 
 // Constans
 assert e == 2.718281828459045;
@@ -16,3 +16,11 @@ assert abs(1) == 1;
 assert abs(-1) == 1;
 assert abs(3.33) == 3.33;
 assert abs(-3.33) == 3.33;
+
+assert sign(-9) == -1;
+assert sign(9) == +1;
+assert sign(9) == 1;
+assert sign(0) == 0;
+assert sign(0) == +0;
+assert sign(0) == -0;
+assert sign(0 / 0) == 0;

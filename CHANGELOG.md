@@ -1,3 +1,8 @@
+## 1.0.5
+
+- Improved abs function.
+- Added sign function.
+
 ## 1.0.4
 
 - Prepared Functions Module.

@@ -7,7 +7,7 @@ module {
 
 	/// e
 	///
-	/// Mathematical constants
+	/// Mathematical constant
 	///
 	/// The Number e (Euler's number)
 	///
@@ -16,7 +16,7 @@ module {
 
 	/// pi
 	///
-	/// Mathematical constants
+	/// Mathematical constant
 	///
 	/// The Number Pi
 	///
@@ -25,7 +25,7 @@ module {
 
 	/// phi
 	///
-	/// Mathematical constants
+	/// Mathematical constant
 	///
 	/// The Golden Ratio (Phi)
 	///
@@ -86,10 +86,29 @@ module {
 	/// Example:
 	/// ```motoko
 	/// assert abs(0) == 0;
-	/// assert abs(3) == 3;
+	/// assert abs(1) == 1;
 	/// assert abs(-1) == 1;
+	/// assert abs(3.33) == 3.33;
+	/// assert abs(-3.33) == 3.33;
 	/// ```
 	public func abs(x : Float) : Float {
 		return Functions.abs0(x);
+	};
+
+	/// sign(x)
+	///
+	/// Native function
+	///
+	/// The sign function returns only one of three values (-1, 0, 1)
+	///
+	/// Example:
+	/// ```motoko
+	/// assert sign(-9) == -1;
+	/// assert sign(9) == +1;
+	/// assert sign(0) == 0;
+	/// assert sign(0 / 0) == 0;
+	/// ```
+	public func sign(x : Float) : Float {
+		return Functions.signx(x);
 	};
 };
