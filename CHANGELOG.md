@@ -1,3 +1,9 @@
+## 1.0.8
+
+- Improved factorial function.
+- Added gamma function.
+- Added degToRad function.
+
 ## 1.0.7
 
 - Improved code import between modules.

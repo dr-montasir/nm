@@ -151,7 +151,10 @@ module {
 	///
 	/// Native function
 	///
-	/// The native fact function is utilized to generate the native sine function.
+	/// The native factorial function is utilized to generate the native sine function.
+	/// The factorial function is defined as: n!=n×(n−1)×(n−2)×…×2×1.
+	///
+	/// 3!=3×2×1=6
 	///
 	/// Example:
 	/// ```motoko
@@ -162,7 +165,51 @@ module {
 	/// assert fact(16) == 20922789888000;
 	/// assert fact(18) == 6402373705728000;
 	/// ```
-	public func fact(x : Nat) : Float {
+	public func fact(x : Nat) : Nat {
 		return Fn.fact(x);
+	};
+
+	/// gamma(x)
+	///
+	/// Extended factorial function
+	///
+	/// Γ(n) is a way to extend the factorial function to all complex numbers except the negative integers and zero.
+	/// For any positive integer, the Gamma function is defined as: Γ(n)=(n−1)!
+	///
+	/// Γ(3)=(3−1)! = 2!=2×1=2
+	/// Example:
+	/// ```motoko
+	/// // assert gamma(0) returns an error. FAIL src/Functions/lib.mo: execution error, arithmetic overflow.
+	/// assert gamma(1) == 1;
+	/// assert gamma(2) == 1;
+	/// assert gamma(3) == 2;
+	/// assert gamma(4) == 6;
+	/// assert gamma(19) == 6402373705728000;
+	/// ```
+	public func gamma(x : Nat) : Nat {
+		return Fn.gamma(x);
+	};
+
+	/// degToRad(x)
+	///
+	/// Conversion Function
+	///
+	/// degToRad function takes an angle in degrees as input and returns the equivalent angle in radians.
+	/// The conversion factor is π radians per 180 degrees, since a full circle is 360 degrees or 2π radians.
+	///
+	/// Example:
+	/// ```motoko
+	/// assert degToRad(0) == 0;
+	/// assert degToRad(1) == 0.017453292519943295;
+	/// assert degToRad(30) == 0.5235987755982988;
+	/// assert degToRad(45) == 0.7853981633974483;
+	/// assert degToRad(60) == 1.0471975511965976;
+	/// assert degToRad(90) == 1.5707963267948966;
+	/// assert degToRad(180) == 3.141592653589793;
+	/// assert degToRad(360) == 6.283185307179586;
+	/// assert degToRad(-360) == -6.283185307179586;
+	/// ```
+	public func degToRad(x : Float) : Float {
+		return Fn.degToRad(x);
 	};
 };

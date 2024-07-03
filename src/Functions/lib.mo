@@ -1,9 +1,10 @@
 import Prim "mo:prim";
+import Cn "../Constants";
 
 module {
   /// note 1
   ///
-  /// To import the Prim library, the recommended method is import Prim "mo:prim";.
+  /// To import the Prim library, the recommended method is <import Prim "mo:prim";>.
   /// Utilizing emojis as identifiers when importing libraries into your code is generally discouraged.
   public func note_1() : Text {
     return "import Prim 'mo:prim';";
@@ -62,12 +63,37 @@ module {
   ///
   /// Native function
   ///
-  /// The native fact function is utilized to generate the native sine function.
-  public func fact(x : Nat) : Float {
+  /// The native factorial function is utilized to generate the native sine function.
+  /// The factorial function is defined as: n!=n×(n−1)×(n−2)×…×2×1.
+  ///
+  /// 3!=3×2×1=6
+  public func fact(x : Nat) : Nat {
     if (x <= 1) {
       return 1;
     } else {
-      return NatToFloat(x) * fact(x - 1);
+      return x * fact(x - 1);
     };
+  };
+
+  /// gamma(x)
+  ///
+  /// Extended factorial function
+  ///
+  /// Γ(n) is a way to extend the factorial function to all complex numbers except the negative integers and zero.
+  /// For any positive integer, the Gamma function is defined as: Γ(n)=(n−1)!
+  ///
+  /// Γ(3)=(3−1)! = 2!=2×1=2
+  public func gamma(x : Nat) : Nat {
+    return fact(x - 1);
+  };
+
+  /// degToRad(x)
+  ///
+  /// Conversion Function
+  ///
+  /// degToRad function takes an angle in degrees as input and returns the equivalent angle in radians.
+  /// The conversion factor is π radians per 180 degrees, since a full circle is 360 degrees or 2π radians.
+  public func degToRad(x : Float) : Float {
+    return (x * Cn.PI) / 180;
   };
 };
