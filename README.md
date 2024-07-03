@@ -2,7 +2,7 @@
 
 # Native Math (NM)
 
-> A tiny math library for Motoko
+> A Tiny and Powerful Math Library for Motoko
 
 ## Install
 

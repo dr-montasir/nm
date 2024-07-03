@@ -1,3 +1,10 @@
+## 1.0.6
+
+- Added NatToFloat function.
+- Added IntToFloat function.
+- Added fact function.
+- Deleted Errors Folder.
+
 ## 1.0.5
 
 - Improved abs function.

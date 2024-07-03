@@ -1,7 +1,7 @@
 [package]
 name = "nm"
-version = "1.0.5"
-description = "Native Math (NM): A tiny math library for Motoko"
+version = "1.0.6"
+description = "Native Math (NM): A Tiny and Powerful Math Library for Motoko"
 repository = "https://github.com/dr-montasir/nm"
 keywords = [
   "math",

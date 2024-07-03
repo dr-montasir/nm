@@ -77,7 +77,7 @@ module {
 	/// 0.434294481903252
 	public let log10e : Float = Constants.LOG10E;
 
-	/// abs
+	/// abs(x)
 	///
 	/// Native function
 	///
@@ -99,16 +99,70 @@ module {
 	///
 	/// Native function
 	///
-	/// The sign function returns only one of three values (-1, 0, 1)
+	/// The sign function returns only one of three possible values: −1, 0 or 1.
 	///
 	/// Example:
 	/// ```motoko
 	/// assert sign(-9) == -1;
 	/// assert sign(9) == +1;
+	/// assert sign(--9.5) == +1;
+	/// assert sign(-+9.5) == -1;
+	/// assert sign(6 - 15) == -1;
 	/// assert sign(0) == 0;
 	/// assert sign(0 / 0) == 0;
 	/// ```
 	public func sign(x : Float) : Float {
 		return Functions.signx(x);
+	};
+
+	/// NatToFloat(x)
+	///
+	/// Type Conversion Function
+	///
+	/// The NatToFloat function is typically used to convert a natural number,
+	/// which is an integer greater than or equal to zero, into a floating-point number.
+	///
+	/// Example:
+	/// ```motoko
+	/// assert NatToFloat(0) == 0.0;
+	/// assert NatToFloat(1) == 1.0;
+	/// ```
+	public func NatToFloat(x : Nat) : Float {
+		return Functions.NatToFloat(x);
+	};
+
+	/// IntToFloat(x)
+	///
+	/// Type Conversion Function
+	///
+	/// The IntToFloat function is used to convert an integer x to a floating-point number.
+	///
+	/// Example:
+	/// ```motoko
+	/// assert IntToFloat(0) == 0.0;
+	/// assert IntToFloat(1) == 1.0;
+	/// assert IntToFloat(-1) == -1.0;
+	/// ```
+	public func IntToFloat(x : Int) : Float {
+		return Functions.IntToFloat(x);
+	};
+
+	/// fact(x)
+	///
+	/// Native function
+	///
+	/// The native fact function is utilized to generate the native sine function.
+	///
+	/// Example:
+	/// ```motoko
+	/// assert fact(0) == 1;
+	/// assert fact(1) == 1;
+	/// assert fact(2) == 2;
+	/// assert fact(3) == 6;
+	/// assert fact(16) == 20922789888000;
+	/// assert fact(18) == 6402373705728000;
+	/// ```
+	public func fact(x : Nat) : Float {
+		return Functions.fact(x);
 	};
 };
