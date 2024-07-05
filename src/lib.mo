@@ -91,9 +91,7 @@ module {
 	/// assert abs(3.33) == 3.33;
 	/// assert abs(-3.33) == 3.33;
 	/// ```
-	public func abs(x : Float) : Float {
-		return Fn.abs0(x);
-	};
+	public func abs(x : Float) : Float { Fn.abs(x) };
 
 	/// sign(x)
 	///
@@ -111,9 +109,7 @@ module {
 	/// assert sign(0) == 0;
 	/// assert sign(0 / 0) == 0;
 	/// ```
-	public func sign(x : Float) : Float {
-		return Fn.signx(x);
-	};
+	public func sign(x : Float) : Float { Fn.sign(x) };
 
 	/// NatToFloat(x)
 	///
@@ -127,9 +123,7 @@ module {
 	/// assert NatToFloat(0) == 0.0;
 	/// assert NatToFloat(1) == 1.0;
 	/// ```
-	public func NatToFloat(x : Nat) : Float {
-		return Fn.NatToFloat(x);
-	};
+	public func NatToFloat(x : Nat) : Float { Fn.NatToFloat(x) };
 
 	/// IntToFloat(x)
 	///
@@ -143,9 +137,7 @@ module {
 	/// assert IntToFloat(1) == 1.0;
 	/// assert IntToFloat(-1) == -1.0;
 	/// ```
-	public func IntToFloat(x : Int) : Float {
-		return Fn.IntToFloat(x);
-	};
+	public func IntToFloat(x : Int) : Float { Fn.IntToFloat(x) };
 
 	/// fact(x)
 	///
@@ -165,9 +157,7 @@ module {
 	/// assert fact(16) == 20922789888000;
 	/// assert fact(18) == 6402373705728000;
 	/// ```
-	public func fact(x : Nat) : Nat {
-		return Fn.fact(x);
-	};
+	public func fact(x : Nat) : Nat { Fn.fact(x) };
 
 	/// gamma(x)
 	///
@@ -186,9 +176,7 @@ module {
 	/// assert gamma(4) == 6;
 	/// assert gamma(19) == 6402373705728000;
 	/// ```
-	public func gamma(x : Nat) : Nat {
-		return Fn.gamma(x);
-	};
+	public func gamma(x : Nat) : Nat { Fn.gamma(x) };
 
 	/// degToRad(x)
 	///
@@ -209,7 +197,26 @@ module {
 	/// assert degToRad(360) == 6.283185307179586;
 	/// assert degToRad(-360) == -6.283185307179586;
 	/// ```
-	public func degToRad(x : Float) : Float {
-		return Fn.degToRad(x);
-	};
+	public func degToRad(x : Float) : Float { Fn.degToRad(x) };
+
+	/// pow(x, y)
+	///
+	/// Native function
+	///
+	/// The pow function is a mathematical function that computes the power of a number.
+	///
+	/// Example:
+	/// ```motoko
+	/// assert pow(0, 1) == 0;
+	/// assert pow(0, 0) == 1;
+	/// assert pow(0 / 0, 0) == 1;
+	/// assert pow(1, 0) == 1;
+	/// assert pow(3, 3) == 27;
+	/// assert pow(2, -3) == 0.125;
+	/// assert pow(-3, 2) == 9;
+	/// assert pow(-3, -3) == -0.037037037037037035;
+	/// assert pow(3.33, 3.33) == 54.92110892259572;
+	/// assert pow(3.33, -3.33) == 0.01820793533883979;
+	/// ```
+	public func pow(x : Float, y : Float) : Float { Fn.pow(x, y) };
 };

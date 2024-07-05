@@ -59,3 +59,14 @@ assert test.degToRad(90) == 1.5707963267948966;
 assert test.degToRad(180) == 3.141592653589793;
 assert test.degToRad(360) == 6.283185307179586;
 assert test.degToRad(-360) == -6.283185307179586;
+
+assert test.pow(0, 1) == 0;
+assert test.pow(0, 0) == 1;
+assert test.pow(0 / 0, 0) == 1;
+assert test.pow(1, 0) == 1;
+assert test.pow(3, 3) == 27;
+assert test.pow(2, -3) == 0.125;
+assert test.pow(-3, 2) == 9;
+assert test.pow(-3, -3) == -0.037037037037037035;
+assert test.pow(3.33, 3.33) == 54.92110892259572;
+assert test.pow(3.33, -3.33) == 0.01820793533883979;

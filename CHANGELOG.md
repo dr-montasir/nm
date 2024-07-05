@@ -1,3 +1,8 @@
+## 1.0.9
+
+- Improved functions.
+- Added pow function.
+
 ## 1.0.8
 
 - Improved factorial function.
