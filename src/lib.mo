@@ -167,6 +167,7 @@ module {
 	/// For any positive integer, the Gamma function is defined as: Γ(n)=(n−1)!
 	///
 	/// Γ(3)=(3−1)! = 2!=2×1=2
+	///
 	/// Example:
 	/// ```motoko
 	/// // assert gamma(0) returns an error. FAIL src/Functions/lib.mo: execution error, arithmetic overflow.
@@ -177,6 +178,58 @@ module {
 	/// assert gamma(19) == 6402373705728000;
 	/// ```
 	public func gamma(x : Nat) : Nat { Fn.gamma(x) };
+
+	/// floor(x)
+	///
+	/// Rounding function
+	///
+	/// The floor function returns the largest integer less than or equal to a given number.
+	///
+	/// Example:
+	/// ```motoko
+	/// assert floor(0) == 0;
+	/// assert floor(0.99) == 0;
+	/// assert floor(-0.99) == -1;
+	/// assert floor(1.99) == 1;
+	/// assert floor(1.01) == 1;
+	/// assert floor(-1.99) == -2;
+	/// ```
+	public func floor(x : Float) : Float { Fn.floor(x) };
+
+	/// ceil(x)
+	///
+	/// Rounding function
+	///
+	/// The ceil function rounds a number up to the nearest integer greater than or equal to it.
+	///
+	/// Example:
+	/// ```motoko
+	/// assert ceil(0) == 0;
+	/// assert ceil(0.99) == 1;
+	/// assert ceil(-0.99) == 0;
+	/// assert ceil(1.99) == 2;
+	/// assert ceil(1.01) == 2;
+	/// assert ceil(-1.99) == -1;
+	/// ```
+	public func ceil(x : Float) : Float { Fn.ceil(x) };
+
+	/// round(x)
+	///
+	/// Rounding function
+	///
+	/// The round function aligns a number to the closest integer,
+	/// adjusting fractions of .5 or greater up, and less than .5 down.
+	///
+	/// Example:
+	/// ```motoko
+	/// assert round(0) == 0;
+	/// assert round(0.5) == 1;
+	/// assert round(-0.5) == -1;
+	/// assert round(1.99) == 2;
+	/// assert round(1.01) == 1;
+	/// assert round(-1.99) == -2;
+	/// ```
+	public func round(x : Float) : Float { Fn.round(x) };
 
 	/// degToRad(x)
 	///

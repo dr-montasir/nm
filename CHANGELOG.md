@@ -1,3 +1,9 @@
+## 1.1.0
+
+- Added floor function.
+- Added ceil function.
+- Added round function.
+
 ## 1.0.9
 
 - Improved functions.

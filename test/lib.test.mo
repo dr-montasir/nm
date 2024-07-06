@@ -50,6 +50,27 @@ assert test.gamma(3) == 2;
 assert test.gamma(4) == 6;
 assert test.gamma(19) == 6402373705728000;
 
+assert test.floor(0) == 0;
+assert test.floor(0.99) == 0;
+assert test.floor(-0.99) == -1;
+assert test.floor(1.99) == 1;
+assert test.floor(1.01) == 1;
+assert test.floor(-1.99) == -2;
+
+assert test.ceil(0) == 0;
+assert test.ceil(0.99) == 1;
+assert test.ceil(-0.99) == 0;
+assert test.ceil(1.99) == 2;
+assert test.ceil(1.01) == 2;
+assert test.ceil(-1.99) == -1;
+
+assert test.round(0) == 0;
+assert test.round(0.99) == 1;
+assert test.round(-0.99) == -1;
+assert test.round(1.99) == 2;
+assert test.round(1.01) == 1;
+assert test.round(-1.99) == -2;
+
 assert test.degToRad(0) == 0;
 assert test.degToRad(1) == 0.017453292519943295;
 assert test.degToRad(30) == 0.5235987755982988;

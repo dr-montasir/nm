@@ -61,6 +61,30 @@ module {
   /// Γ(3)=(3−1)! = 2!=2×1=2
   public func gamma(x : Nat) : Nat { fact(x - 1) };
 
+  /// floor(x)
+  ///
+  /// Rounding function
+  ///
+  /// The floor function returns the largest integer less than or equal to a given number.
+  public func floor(x : Float) : Float { Prim.floatFloor(x) };
+
+  /// ceil(x)
+  ///
+  /// Rounding function
+  ///
+  /// The ceil function rounds a number up to the nearest integer greater than or equal to it.
+  public func ceil(x : Float) : Float { Prim.floatCeil(x) };
+
+  /// round(x)
+  ///
+  /// Rounding function
+  ///
+  /// The round function aligns a number to the closest integer,
+  /// adjusting fractions of .5 or greater up, and less than .5 down.
+  public func round(x : Float) : Float {
+    if (x < 0) { ceil(x - 0.5) } else { floor(x + 0.5) };
+  };
+
   /// degToRad(x)
   ///
   /// Conversion Function
