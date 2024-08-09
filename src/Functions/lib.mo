@@ -99,4 +99,15 @@ module {
   ///
   /// The pow function is a mathematical function that computes the power of a number.
   public func pow(x : Float, y : Float) : Float { x ** y };
+
+  /// fix(x, decimal_places)
+  ///
+  /// Fixation Function
+  ///
+  /// The `fix` function rounds a floating-point number `x` to a fixed-point value with a
+  /// specified number of decimal places, returning the result as a floating-point number.
+  public func fix(x: Float, decimal_places: Nat) : Float {
+    var multiplier = pow(10.0, NatToFloat(decimal_places));
+    round((x * multiplier)) / multiplier;
+  };
 };

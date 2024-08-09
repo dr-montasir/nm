@@ -272,4 +272,26 @@ module {
 	/// assert pow(3.33, -3.33) == 0.01820793533883979;
 	/// ```
 	public func pow(x : Float, y : Float) : Float { Fn.pow(x, y) };
+
+  /// fix(x, decimal_places)
+  ///
+  /// Fixation Function
+  ///
+  /// The `fix` function rounds a floating-point number `x` to a fixed-point value with a
+  /// specified number of decimal places, returning the result as a floating-point number.
+	/// Example:
+	/// ```motoko
+	/// assert fix(0.51820793533883979, 0) == 1;
+	/// assert fix(0.51820793533883979, 1) == 0.5;
+	/// assert fix(0.51820793533883979, 2) == 0.52;
+	/// assert fix(0.51820793533883979, 3) == 0.518;
+	/// assert fix(0.51820793533883979, 16) == 0.5182079353388398;
+	/// assert fix(0.51820793533883979, 17) == 0.51820793533883980;
+	/// assert fix(0.51820793533883979, 20) == 0.5182079353388398;
+	/// assert (0.1 + 0.2) == 0.30000000000000004;
+	/// assert (0.1 * 0.1) == 0.010000000000000002;
+	/// assert fix(0.1 + 0.2, 15) == 0.3;
+	/// assert fix(0.1 * 0.1, 15) == 0.01;
+	/// ```
+	public func fix(x : Float, decimal_places: Nat) : Float { Fn.fix(x, decimal_places) };
 };

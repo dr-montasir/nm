@@ -19,5 +19,11 @@ import nm "mo:nm";
 
 import NM "mo:nm";
 
-// example...
+// examples
+import test "../src/lib"
+
+assert (0.1 + 0.2) == 0.30000000000000004;
+assert (0.1 * 0.1) == 0.010000000000000002;
+assert test.fix(0.1 + 0.2, 15) == 0.3;
+assert test.fix(0.1 * 0.1, 15) == 0.01;
 ```
